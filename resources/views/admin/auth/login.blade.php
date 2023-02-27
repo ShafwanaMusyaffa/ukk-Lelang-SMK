@@ -1,56 +1,132 @@
-<x-admin-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+        name="viewport">
+    <title>Login &mdash; Stisla</title>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <h2 class="text-4xl font-bold text-center">Admin Login</h2>
-        <form method="POST" action="{{ route('admin.login') }}">
-            @csrf
+    <!-- General CSS Files -->
+    <link rel="stylesheet"
+        href="{{ asset('admin/library/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+    <!-- CSS Libraries -->
+    <link rel="stylesheet"
+        href="{{ asset('admin/library/bootstrap-social/bootstrap-social.css') }}">
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+    <!-- Template CSS -->
+    <link rel="stylesheet"
+        href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin/css/components.css') }}">
+</head>
+
+<body>
+    <div id="app">
+        <section class="section">
+            <div class="d-flex align-items-stretch flex-wrap">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
+                    <div class="m-3 p-4">
+                        <img src="{{ asset('admin/img/stisla-fill.svg') }}"
+                            alt="logo"
+                            width="80"
+                            class="shadow-light rounded-circle mb-5 mt-2">
+                        <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Stisla</span>
+                        </h4>
+                        <p class="text-muted">Before you get started, you must login or register if you don't already
+                            have an account.</p>
+                        <form method="POST"
+                            action="{{ route('admin.login') }}"
+                            class="needs-validation"
+                            novalidate="">
+                            @csrf
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email"
+                                    type="email"
+                                    class="form-control"
+                                    name="email"
+                                    tabindex="1"
+                                    required
+                                    autofocus>
+                                <div class="invalid-feedback">
+                                    Please fill in your email
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="d-block">
+                                    <label for="password"
+                                        class="control-label">Password</label>
+                                </div>
+                                <input id="password"
+                                    type="password"
+                                    class="form-control"
+                                    name="password"
+                                    tabindex="2"
+                                    required>
+                                <div class="invalid-feedback">
+                                    please fill in your password
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <a href="auth-forgot-password.html"
+                                    class="float-left mt-3">
+                                    Forgot Password?
+                                </a>
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg btn-icon icon-right"
+                                    tabindex="4">
+                                    Login
+                                </button>
+                            </div>
+
+                            <div class="mt-5 text-center">
+                                Don't have an account? <a href="auth-register.html">Create new one</a>
+                            </div>
+                        </form>
+
+                        <div class="text-small mt-5 text-center">
+                            &copy; Copyright 2023 Voushell
+                            <div class="mt-2">
+                                <a href="#">Privacy Policy</a>
+                                <div class="bullet"></div>
+                                <a href="#">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 order-lg-2 min-vh-100 background-walk-y position-relative overlay-gradient-bottom order-1"
+                    data-background="{{ asset('admin/img/unsplash/login-bg.jpg') }}">
+                    <div class="absolute-bottom-left index-2">
+                    </div>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+    <!-- General JS Scripts -->
+    <script src="{{ asset('admin/library/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/library/popper.js/dist/umd/popper.js') }}"></script>
+    <script src="{{ asset('admin/library/tooltip.js/dist/umd/tooltip.js') }}"></script>
+    <script src="{{ asset('admin/library/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('admin/library/moment/min/moment.min.js') }}"></script>
+    <script src="{{ asset('admin/js/stisla.js') }}"></script>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
+    <!-- JS Libraies -->
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+    <!-- Page Specific JS File -->
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+    <!-- Template JS File -->
+    <script src="{{ asset('admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
+</body>
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-admin-guest-layout>
+</html>

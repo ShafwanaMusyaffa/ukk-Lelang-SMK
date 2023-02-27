@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,13 +20,13 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Admin::create([
             'name'=>'Admin',
-            'Email' => 'admin@admin.com',
+            'Email' => 'admin@gmail.com',
             'password'=>bcrypt('password')
         ]);
 
         \App\Models\User::create([
             'name'=>'User',
-            'Email' => 'user@user.com',
+            'Email' => 'user@gmail.com',
             'password'=>bcrypt('password')
         ]);
 

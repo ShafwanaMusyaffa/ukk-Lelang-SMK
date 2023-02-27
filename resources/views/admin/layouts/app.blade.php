@@ -1,36 +1,63 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+        name="viewport">
+    <title>@yield('title') &mdash; Stisla</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <!-- General CSS Files -->
+    <link rel="stylesheet"
+        href="{{ asset('admin/library/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @stack('style')
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('admin.layouts.navigation')
+    <!-- Template CSS -->
+    <link rel="stylesheet"
+        href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin/css/components.css') }}">
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+</head>
+</head>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+            <!-- Header -->
+            @include('components.header')
+
+            <!-- Sidebar -->
+            @include('components.sidebar')
+
+            <!-- Content -->
+            @yield('main')
+
+            <!-- Footer -->
+            @include('components.footer')
         </div>
-    </body>
+    </div>
+
+    <!-- General JS Scripts -->
+    <script src="{{ asset('admin/library/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/library/popper.js/dist/umd/popper.js') }}"></script>
+    <script src="{{ asset('admin/library/tooltip.js/dist/umd/tooltip.js') }}"></script>
+    <script src="{{ asset('admin/library/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('admin/library/moment/min/moment.min.js') }}"></script>
+    <script src="{{ asset('admin/js/stisla.js') }}"></script>
+
+    @stack('scripts')
+
+    <!-- Template JS File -->
+    <script src="{{ asset('admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
+</body>
+
 </html>

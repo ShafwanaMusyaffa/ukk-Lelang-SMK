@@ -43,4 +43,9 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isAdmin()
+    {
+        return true; // ganti dengan logika pengecekan hak akses admin
+    }
 }
