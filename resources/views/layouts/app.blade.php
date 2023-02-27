@@ -5,17 +5,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="Tempat lelang branded terkenal">
       <meta name="author" content="">
-      <link rel="shortcut icon" type="image/x-icon" href="/client/img/favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="{{asset('/client/img/favicon.ico')}}">
       <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,900" rel="stylesheet">
       <title>@yield('title') - Voushell</title>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       @stack('addon-css')
-      <link href="/client/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-      <link href="/client/css/styles.css" rel="stylesheet">
-      <link href="/client/css/animate.css" rel="stylesheet">
-      <link href="/client/css/owl-carousel.css" rel="stylesheet">
-      <link href="/client/css/lightbox.css" rel="stylesheet">
+      <link href="{{asset('/client/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+      <link href="{{asset('/client/css/styles.css')}}" rel="stylesheet">
+      <link href="{{asset('/client/css/animate.css')}}" rel="stylesheet">
+      <link href="{{asset('/client/css/owl-carousel.css')}}" rel="stylesheet">
+      <link href="{{asset('/client/css/lightbox.css')}}" rel="stylesheet">
    </head>
    <body class="index">
       <header class="header-area header-sticky text-center header-default">
@@ -24,7 +24,7 @@
                <div class="container">
                   <div class="header-middle float-lg-left float-md-left float-sm-left float-xs-none">
                      <div class="logo">
-                        <a href="/"><img src="/client/img/logos/logo.png" alt="logo" width="200" height="50" ></a>		
+                        <a href="/"><img src="{{asset('/client/img/logos/logo.png')}}" alt="logo" width="200" height="50" ></a>
                      </div>
                   </div>
                   <div class="header-right d-flex d-xs-flex d-sm-flex justify-content-end float-right">
@@ -45,7 +45,7 @@
                            @auth
                            <ul class="list-group">
                                  <li class="list-group-item"><a href="/profile" class="text-capitalize">my account</a></li>
-                               
+
                                  <li class="list-group-item"><a href="#" class="modal-view button" data-toggle="modal" data-target="#modalLogoutForm">Logout</a></li>
                             @else
                                 <li class="list-group-item"><a href="#" class="modal-view button" data-toggle="modal" data-target="#modalRegisterForm">Register</a></li>
@@ -78,7 +78,7 @@
                               </a>
                            </li>
                            <li class="nav-item dropdown">
-                              <a class="nav-link text-uppercase" href="/product">Product</a>      
+                              <a class="nav-link text-uppercase" href="/product">Product</a>
                            </li>
                            <li class="nav-item dropdown mega-dropdown">
                               <a class="nav-link dropdown-toggle text-uppercase" href="">Category</a>
@@ -90,18 +90,18 @@
                                        <ul class="list-unstyled">
                                           <li>
                                              <a class="menu-item pl-0" href="filter-toggle.html">
-                                             filter toggle                  
-																						</a>                
+                                             filter toggle
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="off-canvas-left.html">
-                                             off canvas left                
-																						</a>                
+                                             off canvas left
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="off-canvas-right.html">
-                                             off canvas right                
-																						</a>                
+                                             off canvas right
+																						</a>
                                           </li>
                                        </ul>
                                     </div>
@@ -110,23 +110,23 @@
                                        <ul class="list-unstyled">
                                           <li>
                                              <a class="menu-item pl-0" href="category-5-col.html">
-                                             5 columns mode                 
-																						</a>                
+                                             5 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-6-col.html">
-                                             6 columns mode                     
-																						</a>                
+                                             6 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-7-col.html">
-                                             7 columns mode                     
-																						</a>                
+                                             7 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-8-col.html">
-                                             8 columns mode                 
-																						</a>                
+                                             8 columns mode
+																						</a>
                                           </li>
                                        </ul>
                                     </div>
@@ -135,23 +135,23 @@
                                        <ul class="list-unstyled">
                                           <li>
                                              <a class="menu-item pl-0" href="category-5-col.html">
-                                             5 columns mode                 
-																						</a>                
+                                             5 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-6-col.html">
-                                             6 columns mode                     
-																						</a>                
+                                             6 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-7-col.html">
-                                             7 columns mode                     
-																						</a>                
+                                             7 columns mode
+																						</a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-8-col.html">
-                                             8 columns mode                 
-																						</a>                
+                                             8 columns mode
+																						</a>
                                           </li>
                                        </ul>
                                     </div>
@@ -187,23 +187,23 @@
                                     <ul class="list-unstyled">
                                        <li>
                                           <a class="menu-item pl-0" href="index.html">
-                                          Home 1                  </a>                
+                                          Home 1                  </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="index2.html">
-                                          Home 2                  </a>                
+                                          Home 2                  </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="index3.html">
-                                          Home 3                 </a>                
+                                          Home 3                 </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="index4.html">
-                                          Home 4                  </a>                
+                                          Home 4                  </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="index5.html">
-                                          Home 5                  </a>                
+                                          Home 5                  </a>
                                        </li>
                                     </ul>
                                  </div>
@@ -220,15 +220,15 @@
                                        <ul class="list-unstyled">
                                           <li>
                                              <a class="menu-item pl-0" href="filter-toggle.html">
-                                             filter toggle                  </a>                
+                                             filter toggle                  </a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="off-canvas-left.html">
-                                             off canvas left                </a>                
+                                             off canvas left                </a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="off-canvas-right.html">
-                                             off canvas right                </a>                
+                                             off canvas right                </a>
                                           </li>
                                        </ul>
                                     </div>
@@ -237,26 +237,26 @@
                                        <ul class="list-unstyled">
                                           <li>
                                              <a class="menu-item pl-0" href="category-5-col.html">
-                                             grid 5 column                 </a>                
+                                             grid 5 column                 </a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-6-col.html">
-                                             grid 6 column                  </a>                
+                                             grid 6 column                  </a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-7-col.html">
-                                             grid 7 column                   </a>                
+                                             grid 7 column                   </a>
                                           </li>
                                           <li>
                                              <a class="menu-item pl-0" href="category-8-col.html">
-                                             grid 8 column                </a>                
+                                             grid 8 column                </a>
                                           </li>
                                        </ul>
                                     </div>
                                     <div class="col-md-6 col-xl-4 sub-menu mb-0">
                                        <ul class="list-unstyled">
                                           <li>
-                                             <span class="menu-banner"><img src="/client/img/banner/menu-banner.jpg" alt="menu-banner" width="210" height="300"/></span>                
+                                             <span class="menu-banner"><img src="{{asset('/client/img/banner/menu-banner.jpg')}}" alt="menu-banner" width="210" height="300"/></span>
                                           </li>
                                        </ul>
                                     </div>
@@ -272,23 +272,23 @@
                                  <div class="sub-menu mb-xl-0 mb-4">                                    <ul class="list-unstyled">
                                        <li>
                                           <a class="menu-item pl-0" href="product-grid.html">
-                                          product grid                </a>                
+                                          product grid                </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="product-sticky-right.html">
-                                          sticky right                  </a>                
+                                          sticky right                  </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="product-extended-layout.html">
-                                          Extended layout                 </a>                
+                                          Extended layout                 </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="product-details.html">
-                                          Default layout                </a>                
+                                          Default layout                </a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="product-compact.html">
-                                          compact layout           </a>                
+                                          compact layout           </a>
                                        </li>
                                     </ul>
                                  </div>
@@ -305,34 +305,34 @@
                                        <li>
                                           <a class="menu-item pl-0" href="blog-2-column.html">
                                           blog 2 column
-																					</a>                
+																					</a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="blog-3-column.html">
                                           blog 3 column
-																					</a>                
+																					</a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="blog-2-column-masonary.html">
-                                          blog masonary                 
-																					</a>                
+                                          blog masonary
+																					</a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="blog-list.html">
-                                          blog list                  
-																					</a>                
+                                          blog list
+																					</a>
                                        </li>
                                        <li>
                                           <a class="menu-item pl-0" href="blog-details.html">
-                                          blog details                  
-																					</a>                
+                                          blog details
+																					</a>
                                        </li>
                                     </ul>
                                  </div>
                               </div>
                            </li>
                            <li class="nav-item dropdown">
-                              <a class="nav-link text-uppercase" href="contact-us.html">contact us</a>      
+                              <a class="nav-link text-uppercase" href="contact-us.html">contact us</a>
                            </li>
                         </ul>
                         <!-- Links -->
@@ -356,86 +356,86 @@
             <div class="row">
                <div class="col-md-2 footer-cms footer-column">
                   <div class="ttcmsfooter">
-                     <div class="footer-logo"><img src="/client/img/logos/footer-logo.png" alt="footer-logo" width="200" height="50"></div>
+                     <div class="footer-logo"><img src="{{asset('/client/img/logos/footer-logo.png')}}" alt="footer-logo" width="200" height="50"></div>
                      <div class="footer-desc">At vero eos et accusamus et iusto odio dignissimos ducimus, duis faucibus enim vitae</div>
                   </div>
                </div>
                <div class="col-md-2 footer-column">
                   <div class="title">
-                     <a href="#company" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">company</a>		  
+                     <a href="#company" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">company</a>
                   </div>
                   <ul id="company" class="list-unstyled collapse">
                      <li>
-                        <a href="#">search</a>            
+                        <a href="#">search</a>
                      </li>
                      <li>
-                        <a href="#">New Products</a>            
+                        <a href="#">New Products</a>
                      </li>
                      <li>
-                        <a href="category.html">Best Collection</a>            
+                        <a href="category.html">Best Collection</a>
                      </li>
                      <li>
-                        <a href="wishlist.html">wishlist</a>            
+                        <a href="wishlist.html">wishlist</a>
                      </li>
                   </ul>
                </div>
                <div class="col-md-2 footer-column">
                   <div class="title">
-                     <a href="#products" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">products</a>		  
+                     <a href="#products" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">products</a>
                   </div>
                   <ul id="products" class="list-unstyled collapse">
                      <li>
-                        <a href="blog-details.html">blog</a>            
+                        <a href="blog-details.html">blog</a>
                      </li>
                      <li>
-                        <a href="about-us.html">about us</a>            
+                        <a href="about-us.html">about us</a>
                      </li>
                      <li>
-                        <a href="contact-us.html">contact us</a>            
+                        <a href="contact-us.html">contact us</a>
                      </li>
                      <li>
-                        <a href="my-account.html">my account</a>            
+                        <a href="my-account.html">my account</a>
                      </li>
                   </ul>
                </div>
                <div class="col-md-2 footer-column">
                   <div class="title">
-                     <a href="#account" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">your account</a>		  
+                     <a href="#account" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">your account</a>
                   </div>
                   <ul id="account" class="list-unstyled collapse">
                      <li>
-                        <a href="blog-details.html">personal info</a>            
+                        <a href="blog-details.html">personal info</a>
                      </li>
                      <li>
-                        <a href="#">orders</a>            
+                        <a href="#">orders</a>
                      </li>
                      <li>
-                        <a href="contact-us.html">addresses</a>            
+                        <a href="contact-us.html">addresses</a>
                      </li>
                      <li>
-                        <a href="my-account.html">my wishlists</a>            
+                        <a href="my-account.html">my wishlists</a>
                      </li>
                   </ul>
                </div>
                <div class="col-md-2 footer-column">
                   <div class="title">
-                     <a href="#information" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">Informasi lelang</a>		  
+                     <a href="#information" class="font-weight-normal text-capitalize mb-10" data-toggle="collapse" aria-expanded="false">Informasi lelang</a>
                   </div>
                   <ul id="information" class="list-unstyled collapse">
                      <li class="contact-detail links">
                         <span class="address">
                         <span class="icon"><i class="material-icons">location_on</i></span>
-                        <span class="data"> 4030, Central Bazzar, opp. Varachha Police Station, Varachha Main Road, Surat, Gujarat 395006, India</span>			  </span>            
+                        <span class="data"> 4030, Central Bazzar, opp. Varachha Police Station, Varachha Main Road, Surat, Gujarat 395006, India</span>			  </span>
                      </li>
                      <li class="links">
                         <span class="contact">
                         <span class="icon"><i class="material-icons">phone</i></span>
-                        <span class="data"><a href="tel:(99)55669999">+ (99) 55-669-999</a></span>			  </span>            
+                        <span class="data"><a href="tel:(99)55669999">+ (99) 55-669-999</a></span>			  </span>
                      </li>
                      <li class="links">
-                        <span class="email"> 
+                        <span class="email">
                         <span class="icon"><i class="material-icons">email</i></span>
-                        <span class="data"><a href="mailto:demo.store@gmail.com">demo.store@gmail.com</a></span>  </span>           
+                        <span class="data"><a href="mailto:demo.store@gmail.com">demo.store@gmail.com</a></span>  </span>
                      </li>
                   </ul>
                </div>
@@ -451,7 +451,7 @@
                </div>
             </div>
          </div>
-         <a href="#" id="goToTop" title="Back to top" class="btn-primary"><i class="material-icons arrow-up">keyboard_arrow_up</i></a> 
+         <a href="#" id="goToTop" title="Back to top" class="btn-primary"><i class="material-icons arrow-up">keyboard_arrow_up</i></a>
       </footer>
       <!-- Footer -->
       <div class="alert text-center cookiealert" role="alert">
@@ -558,20 +558,20 @@
          ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       @stack('addon-script')
-      <script src="/client/js/jquery.min.js"></script>
-      <script src="/client/js/bootstrap.min.js"></script>
-      <script src="/client/js/owl.carousel.min.js"></script>
-      <script src="/client/js/custom.js"></script>
-      <script src="/client/js/parallax.js"></script>
-      <script src="/client/js/lightbox-2.6.min.js"></script>
-      <script src="/client/js/ResizeSensor.min.js"></script>
-      <script src="/client/js/theia-sticky-sidebar.min.js"></script>
-      <script src="/client/js/inview.js"></script>
-      <script src="/client/js/cookiealert.js"></script>
-      <script src="/client/js/jquery.countdown.min.js"></script>
-      <script src="/client/js/masonry.pkgd.min.js"></script>
-      <script src="/client/js/imagesloaded.pkgd.min.js"></script>
-      <script src="/client/js/jquery.zoom.min.js"></script>
-      <script src="/client/js/jquery.lazy.min.js"></script>
+      <script src="{{asset('/client/js/jquery.min.js')}}"></script>
+      <script src="{{asset('/client/js/bootstrap.min.js')}}"></script>
+      <script src="{{asset('/client/js/owl.carousel.min.js')}}"></script>
+      <script src="{{asset('/client/js/custom.js')}}"></script>
+      <script src="{{asset('/client/js/parallax.js')}}"></script>
+      <script src="{{asset('/client/js/lightbox-2.6.min.js')}}"></script>
+      <script src="{{asset('/client/js/ResizeSensor.min.js')}}"></script>
+      <script src="{{asset('/client/js/theia-sticky-sidebar.min.js')}}"></script>
+      <script src="{{asset('/client/js/inview.js')}}"></script>
+      <script src="{{asset('/client/js/cookiealert.js')}}"></script>
+      <script src="{{asset('/client/js/jquery.countdown.min.js')}}"></script>
+      <script src="{{asset('/client/js/masonry.pkgd.min.js')}}"></script>
+      <script src="{{asset('/client/js/imagesloaded.pkgd.min.js')}}"></script>
+      <script src="{{asset('/client/js/jquery.zoom.min.js')}}"></script>
+      <script src="{{asset('/client/js/jquery.lazy.min.js')}}"></script>
    </body>
 </html>
