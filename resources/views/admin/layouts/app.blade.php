@@ -9,7 +9,7 @@
 
     <!-- General CSS Files -->
     <link rel="stylesheet"
-        href="{{ asset('admin/library/bootstrap/dist/css/bootstrap.min.css') }}">
+        href="{{ asset('admins/library/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -20,9 +20,9 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet"
-        href="{{ asset('admin/css/style.css') }}">
+        href="{{ asset('admins/css/style.css') }}">
     <link rel="stylesheet"
-        href="{{ asset('admin/css/components.css') }}">
+        href="{{ asset('admins/css/components.css') }}">
 
 </head>
 </head>
@@ -45,19 +45,19 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="{{ asset('admin/library/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/library/popper.js/dist/umd/popper.js') }}"></script>
-    <script src="{{ asset('admin/library/tooltip.js/dist/umd/tooltip.js') }}"></script>
-    <script src="{{ asset('admin/library/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ asset('admin/library/moment/min/moment.min.js') }}"></script>
-    <script src="{{ asset('admin/js/stisla.js') }}"></script>
+    <script src="{{ asset('admins/library/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('admins/library/popper.js/dist/umd/popper.js') }}"></script>
+    <script src="{{ asset('admins/library/tooltip.js/dist/umd/tooltip.js') }}"></script>
+    <script src="{{ asset('admins/library/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admins/library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('admins/library/moment/min/moment.min.js') }}"></script>
+    <script src="{{ asset('admins/js/stisla.js') }}"></script>
 
     @stack('scripts')
 
     <!-- Template JS File -->
-    <script src="{{ asset('admin/js/scripts.js') }}"></script>
-    <script src="{{ asset('admin/js/custom.js') }}"></script>
+    <script src="{{ asset('admins/js/scripts.js') }}"></script>
+    <script src="{{ asset('admins/js/custom.js') }}"></script>
 </body>
 
 </html>
